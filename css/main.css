@@ -18,31 +18,30 @@
 	width: 98px;
 	position: relative;
 	border: 1px solid #F5F5F5;
+    cursor: pointer;
 }
 
-.cross:nth-child(1){
+.cross{
 	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 130px; 
-    color: #F5F5F5;
-    line-height: 77px;
-    text-align: center;
 	opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.null:nth-child(2){
-	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 90px; 
-    color: #F5F5F5;
-    line-height: 100px;
-    text-align: center;
+.cross img{
+    width: 80%;
+}
+
+.null{
+    position: absolute;
     opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 9px;
 }
 
+.null img{
+    width: 80%;
+}
