@@ -16,6 +16,38 @@ let sec;
 	add(cell_2_2, "cross_2_2", "null_2_2");
 
 
+function start(){
+	document.getElementById("start__game").style.zIndex = "-1";
+}
+
+function restart(){
+	let end = document.getElementById("end__game");
+	end.style.opacity = "0";
+	end.style.zIndex = "-1";
+	document.getElementById("winner").style.zIndex = "-1";
+	delElem("cross_0_0");
+	delElem("cross_0_1");
+	delElem("cross_0_2");
+	delElem("cross_1_0");
+	delElem("cross_1_1");
+	delElem("cross_1_2");
+	delElem("cross_2_0");
+	delElem("cross_2_1");
+	delElem("cross_2_2");
+	delElem("null_0_0");
+	delElem("null_0_1");
+	delElem("null_0_2");
+	delElem("null_1_0");
+	delElem("null_1_1");
+	delElem("null_1_2");
+	delElem("null_2_0");
+	delElem("null_2_1");
+	delElem("null_2_2");
+	function delElem(b){
+		document.getElementById(b).style.opacity = "0";
+	}
+}
+
 function add(a, b, c){
 	a.onclick = function(){
 		let element = document.getElementById(b);
@@ -53,64 +85,155 @@ function WinEl(a, b, c){
 }
 
 function winner(){
+		countX =+ HowEl("cross_0_0", "cross_0_1", "cross_0_2", "cross_1_0", "cross_1_1", "cross_1_2", "cross_2_0", "cross_2_1", "cross_2_2");
+		countO =+ HowEl("null_0_0", "null_0_1", "null_0_2", "null_1_0", "null_1_1", "null_1_2", "null_2_0", "null_2_1", "null_2_2");
+		console.log(countX);
+		console.log(countO);
 	if ((WinEl("cross_0_0", "cross_0_1", "cross_0_2") == 3) || (WinEl("null_0_0", "null_0_1", "null_0_2") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "2%";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_0_0", "cross_0_1", "cross_0_2") == 3){
+			whoWin.textContent = "Congratulations 'X'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_1_0", "cross_1_1", "cross_1_2") == 3) || (WinEl("null_1_0", "null_1_1", "null_1_2") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");		
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "35%";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_1_0", "cross_1_1", "cross_1_2") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_2_0", "cross_2_1", "cross_2_2") == 3) || (WinEl("null_2_0", "null_2_1", "null_2_2") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "70%";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_2_0", "cross_2_1", "cross_2_2") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_0_0", "cross_1_0", "cross_2_0") == 3) || (WinEl("null_0_0", "null_1_0", "null_2_0") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "38%";
 		ell.style.right = "33%";
 		ell.style.transform = "rotate(90deg)";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_0_0", "cross_1_0", "cross_2_0") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_0_1", "cross_1_1", "cross_2_1") == 3) || (WinEl("null_0_1", "null_1_1", "null_2_1") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "38%";
 		ell.style.transform = "rotate(90deg)";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_0_1", "cross_1_1", "cross_2_1") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_0_2", "cross_1_2", "cross_2_2") == 3) || (WinEl("null_0_2", "null_1_2", "null_2_2") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "38%";
 		ell.style.left = "33%";
 		ell.style.transform = "rotate(90deg)";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_0_2", "cross_1_2", "cross_2_2") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_0_0", "cross_1_1", "cross_2_2") == 3) || (WinEl("null_0_0", "null_1_1", "null_2_2") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "37%";
 		ell.style.right = "-13%";
 		ell.style.transform = "rotate(45deg)";
 		ell.style.width = "125%";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_0_0", "cross_1_1", "cross_2_2") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
 	}
 	else if ((WinEl("cross_0_2", "cross_1_1", "cross_2_0") == 3) || (WinEl("null_0_2", "null_1_1", "null_2_0") == 3))  {
 		let ell = document.getElementById("winner");
+		let end = document.getElementById("end__game");
+		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
 		ell.style.top = "37%";
 		ell.style.right = "-13%";
 		ell.style.transform = "rotate(135deg)";
 		ell.style.width = "125%";
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		if(WinEl("cross_0_2", "cross_1_1", "cross_2_0") == 3){
+			whoWin.textContent = "Congratulations 'Х'";
+		}
+		else{
+			whoWin.textContent = "Congratulations '0'";
+		}
 		brake;
+	}
+	else if((+countO+ +countX) == 9){
+		let whoWin = document.getElementById("who__win");
+		let end = document.getElementById("end__game");
+		end.style.opacity = "1";
+		end.style.zIndex = "2";
+		whoWin.textContent = "Oh, sorry, but draw";
 	}
 }
 
