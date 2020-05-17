@@ -54,6 +54,8 @@ function add(a, b, c){
 		let opacity = window.getComputedStyle(element).opacity;
 		let element1 = document.getElementById(c);
 		let opacity1 = window.getComputedStyle(element1).opacity;
+		countX =+ HowEl("cross_0_0", "cross_0_1", "cross_0_2", "cross_1_0", "cross_1_1", "cross_1_2", "cross_2_0", "cross_2_1", "cross_2_2");
+		countO =+ HowEl("null_0_0", "null_0_1", "null_0_2", "null_1_0", "null_1_1", "null_1_2", "null_2_0", "null_2_1", "null_2_2");
 		if((opacity == 0) && (opacity1 == 0)){
 			if(countX>countO){
 				document.getElementById(c).style.opacity = "1";
@@ -62,8 +64,7 @@ function add(a, b, c){
 				document.getElementById(b).style.opacity = "1";
 			}
 		}
-		countX =+ HowEl("cross_0_0", "cross_0_1", "cross_0_2", "cross_1_0", "cross_1_1", "cross_1_2", "cross_2_0", "cross_2_1", "cross_2_2");
-		countO =+ HowEl("null_0_0", "null_0_1", "null_0_2", "null_1_0", "null_1_1", "null_1_2", "null_2_0", "null_2_1", "null_2_2");
+
 		winner();
 
 	}
@@ -94,7 +95,12 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "2%";
+		ell.style.top = "11%";
+		ell.style.left = "0";
+		ell.style.right = "0";
+		ell.style.bottom = "0";
+		ell.style.transform = "rotate(0)";
+		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
 		if(WinEl("cross_0_0", "cross_0_1", "cross_0_2") == 3){
@@ -110,7 +116,12 @@ function winner(){
 		let end = document.getElementById("end__game");		
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "35%";
+		ell.style.top = "42%";
+		ell.style.left = "0";
+		ell.style.right = "0";
+		ell.style.bottom = "0";
+		ell.style.transform = "rotate(0)";
+		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
 		if(WinEl("cross_1_0", "cross_1_1", "cross_1_2") == 3){
@@ -126,7 +137,12 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "70%";
+		ell.style.top = "71%";
+		ell.style.left = "0";
+		ell.style.right = "0";
+		ell.style.bottom = "0";
+		ell.style.transform = "rotate(0)";
+		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
 		if(WinEl("cross_2_0", "cross_2_1", "cross_2_2") == 3){
@@ -142,9 +158,12 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "38%";
-		ell.style.right = "33%";
+		ell.style.top = "44%";
+		ell.style.right = "0";
+		ell.style.left = "-33%";
+		ell.style.bottom = "0";
 		ell.style.transform = "rotate(90deg)";
+		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
 		if(WinEl("cross_0_0", "cross_1_0", "cross_2_0") == 3){
@@ -160,8 +179,12 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "38%";
+		ell.style.top = "44%";
+		ell.style.right = "0";
+		ell.style.left = "0";
+		ell.style.bottom = "0";
 		ell.style.transform = "rotate(90deg)";
+		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
 		if(WinEl("cross_0_1", "cross_1_1", "cross_2_1") == 3){
@@ -177,9 +200,12 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "38%";
+		ell.style.top = "44%";
 		ell.style.left = "33%";
+		ell.style.right = "0";
+		ell.style.bottom = "0";
 		ell.style.transform = "rotate(90deg)";
+		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
 		if(WinEl("cross_0_2", "cross_1_2", "cross_2_2") == 3){
@@ -195,8 +221,10 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "37%";
-		ell.style.right = "-13%";
+		ell.style.top = "43%";
+		ell.style.right = "0";
+		ell.style.left = "-9%";
+		ell.style.bottom = "0";
 		ell.style.transform = "rotate(45deg)";
 		ell.style.width = "125%";
 		end.style.opacity = "1";
@@ -214,8 +242,10 @@ function winner(){
 		let end = document.getElementById("end__game");
 		let whoWin = document.getElementById("who__win");
 		ell.style.zIndex = "1";
-		ell.style.top = "37%";
-		ell.style.right = "-13%";
+		ell.style.top = "43%";
+		ell.style.right = "0";
+		ell.style.left = "-9%"
+		ell.style.bottom = "0";
 		ell.style.transform = "rotate(135deg)";
 		ell.style.width = "125%";
 		end.style.opacity = "1";
