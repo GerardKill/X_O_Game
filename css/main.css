@@ -45,3 +45,10 @@
 .null img{
     width: 80%;
 }
+
+.winner{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    z-index: -1;
+}
