@@ -17,11 +17,23 @@ let sec;
 
 
 function start(){
+	let who__go = document.getElementById("who__go");
+	let X__go = document.getElementById("X__go");
+	let who__go1 = window.getComputedStyle(who__go).opacity;
+	let X__go1 = window.getComputedStyle(X__go).opacity;
 	document.getElementById("start__game").style.zIndex = "-1";
+	who__go.style.opacity = "1";
+	X__go.style.opacity = "1";
 }
 
 function restart(){
 	let end = document.getElementById("end__game");
+	let who__go = document.getElementById("who__go");
+	let X__go = document.getElementById("X__go");
+	let who__go1 = window.getComputedStyle(who__go).opacity;
+	let X__go1 = window.getComputedStyle(X__go).opacity;
+	who__go.style.opacity = "1";
+	X__go.style.opacity = "1";
 	end.style.opacity = "0";
 	end.style.zIndex = "-1";
 	document.getElementById("winner").style.zIndex = "-1";
@@ -54,14 +66,22 @@ function add(a, b, c){
 		let opacity = window.getComputedStyle(element).opacity;
 		let element1 = document.getElementById(c);
 		let opacity1 = window.getComputedStyle(element1).opacity;
+		let X__go = document.getElementById("X__go");
+		let O__go = document.getElementById("O__go");
+		let X__go1 = window.getComputedStyle(X__go).opacity;
+		let O__go1 = window.getComputedStyle(O__go).opacity;
 		countX =+ HowEl("cross_0_0", "cross_0_1", "cross_0_2", "cross_1_0", "cross_1_1", "cross_1_2", "cross_2_0", "cross_2_1", "cross_2_2");
 		countO =+ HowEl("null_0_0", "null_0_1", "null_0_2", "null_1_0", "null_1_1", "null_1_2", "null_2_0", "null_2_1", "null_2_2");
 		if((opacity == 0) && (opacity1 == 0)){
 			if(countX>countO){
 				document.getElementById(c).style.opacity = "1";
+				X__go.style.opacity = "1";
+				O__go.style.opacity = "0";
 			}
 			else{
 				document.getElementById(b).style.opacity = "1";
+				X__go.style.opacity = "0";
+				O__go.style.opacity = "1";
 			}
 		}
 
@@ -90,6 +110,12 @@ function winner(){
 		countO =+ HowEl("null_0_0", "null_0_1", "null_0_2", "null_1_0", "null_1_1", "null_1_2", "null_2_0", "null_2_1", "null_2_2");
 		console.log(countX);
 		console.log(countO);
+		let who__go = document.getElementById("who__go");
+		let X__go = document.getElementById("X__go");
+		let O__go = document.getElementById("O__go");
+		let who__go1 = window.getComputedStyle(who__go).opacity;
+		let X__go1 = window.getComputedStyle(X__go).opacity;
+		let O__go1 = window.getComputedStyle(O__go).opacity;
 	if ((WinEl("cross_0_0", "cross_0_1", "cross_0_2") == 3) || (WinEl("null_0_0", "null_0_1", "null_0_2") == 3))  {
 		let ell = document.getElementById("winner");
 		let end = document.getElementById("end__game");
@@ -103,6 +129,9 @@ function winner(){
 		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_0_0", "cross_0_1", "cross_0_2") == 3){
 			whoWin.textContent = "Congratulations 'X'";
 		}
@@ -124,6 +153,9 @@ function winner(){
 		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_1_0", "cross_1_1", "cross_1_2") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -145,6 +177,9 @@ function winner(){
 		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_2_0", "cross_2_1", "cross_2_2") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -166,6 +201,9 @@ function winner(){
 		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_0_0", "cross_1_0", "cross_2_0") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -187,6 +225,9 @@ function winner(){
 		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_0_1", "cross_1_1", "cross_2_1") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -208,6 +249,9 @@ function winner(){
 		ell.style.width = "100%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_0_2", "cross_1_2", "cross_2_2") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -229,6 +273,9 @@ function winner(){
 		ell.style.width = "125%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_0_0", "cross_1_1", "cross_2_2") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -250,6 +297,9 @@ function winner(){
 		ell.style.width = "125%";
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		if(WinEl("cross_0_2", "cross_1_1", "cross_2_0") == 3){
 			whoWin.textContent = "Congratulations 'Х'";
 		}
@@ -263,6 +313,9 @@ function winner(){
 		let end = document.getElementById("end__game");
 		end.style.opacity = "1";
 		end.style.zIndex = "2";
+		who__go.style.opacity = "0";
+		X__go.style.opacity = "0";
+		O__go.style.opacity = "0";
 		whoWin.textContent = "Oh, sorry, but draw";
 	}
 }

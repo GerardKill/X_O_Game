@@ -116,3 +116,30 @@ body{
 .button:active{
     background: #006400;
 }
+
+.who__go{
+    width: 300px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    position: relative;
+    height: 75px;
+}
+
+#who__go{
+    opacity: 0;
+}
+
+.who__go p{
+    position: absolute;
+    left: 21%;
+}
+
+#X__go, #O__go{
+    width: 15%;
+    position: absolute;
+    right: 17%;
+    opacity: 0;
+}
