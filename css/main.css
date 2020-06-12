@@ -10,10 +10,10 @@ body{
 }
 
 .game__name{
-    color: wheat;
+    color: #DCDCDC;
     text-align: center;
     padding: 20px 0;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 .main__field{
@@ -104,15 +104,15 @@ body{
     height: 45px;
     border: none;
     cursor: pointer;
-    background: orange;
+    background: #32CD32;
     color: white;
     outline: none;
     border-radius: 20px;
 }
 .button:hover{
-    background: #E7A34A;
+    background: #228B22;
 }
 
 .button:active{
-    background: #DA800B;
+    background: #006400;
 }
